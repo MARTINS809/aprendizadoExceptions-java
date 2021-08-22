@@ -67,4 +67,14 @@ public class Account {
 		balance -= amount;
 	}
 	
+	public String validateWdraw(double amount) {
+		if (amount > getWithdrawLimit() ) {
+			System.out.println("Erro de saque: A quantia excede o limite de saque. ");
+		}	
+		if (amount> getBalance()) {
+				System.out.println("Erro de saque: Saldo insuficiente.");
+			}
+		return null;
+	}
+	
 }
